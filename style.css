@@ -204,6 +204,7 @@ body .search .home {
   flex-direction: column;
 }
 body .search .home h1 {
+  text-align: center;
   margin-bottom: 20px;
   color: #332C39;
   letter-spacing: 5px;
