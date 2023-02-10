@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #F0EEED;
+}
+body header {
+  height: 82px;
+  width: 100%;
+  background-color: #332C39;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+}
+body header a {
+  color: #F0EEED;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+body header .menu i {
+  color: #609EA2;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s all;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}
+body header .menu i:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+}
+body header .menu i:active {
+  transform: scale(0.8);
+}
+body .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  min-height: 100vh;
+  background-color: #332C39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+  transform: translateX(-110%);
+  transition: 0.5s;
+}
+body .navbar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+body .navbar .close-btn i {
+  color: #609EA2;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s all;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}
+body .navbar .close-btn i:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+}
+body .navbar .close-btn i:active {
+  transform: scale(0.8);
+}
+body .navbar .opt {
+  background-color: gray;
+  font-size: 30px;
+  background-color: #609EA2;
+  color: #332C39;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  transition: 0.5s all;
+}
+body .navbar .opt:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+  color: #609EA2;
+  border: 1px solid #609EA2;
+}
+body .navbar .opt:active {
+  transform: scale(0.8);
+}
+body .navbar .btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+body .navbar .btn button {
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px;
+  width: 182px;
+  outline: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #609EA2;
+  color: #609EA2;
+  transition: 0.5s all;
+}
+body .navbar .btn button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 5px;
+  color: #609EA2;
+  border: 1px solid #609EA2;
+}
+body .navbar .btn button:active {
+  transform: scale(0.8);
+}
+body .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+body .container .person {
+  padding: 20px;
+  margin: 4px;
+  background-color: #332C39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+body .container .person img {
+  width: 200px;
+  height: 300px;
+}
+body .container .person .infors {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .container .person .infors h1 {
+  font-size: 25px;
+  color: #609EA2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+body .container .person .infors p {
+  font-size: 16px;
+  text-align: center;
+  color: #F0EEED;
+}
+body .search {
+  width: 100%;
+  margin-top: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .search input {
+  font-size: 16px;
+  padding: 10px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  color: #609EA2;
+  background-color: #332C39;
+  outline: none;
+  display: none;
+}
+body .search .home {
+  margin-top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .search .home h1 {
+  margin-bottom: 20px;
+  color: #332C39;
+  letter-spacing: 5px;
+}
+body .search .home #visit {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #609EA2;
+  color: #F0EEED;
+  font-weight: bold;
+  cursor: pointer;
+}
+body .search .item {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+body .search .item .person {
+  padding: 20px;
+  margin: 4px;
+  background-color: #332C39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+body .search .item .person img {
+  width: 200px;
+  height: 300px;
+}
+body .search .item .person .infors {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .search .item .person .infors h1 {
+  font-size: 25px;
+  color: #609EA2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+body .search .item .person .infors p {
+  font-size: 16px;
+  text-align: center;
+  color: #F0EEED;
+}
+
+@media (max-width: 1000px) {
+  body header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 350px) {
+  body .navbar {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

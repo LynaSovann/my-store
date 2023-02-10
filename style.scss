@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$white: #F0EEED;
+$sky: #609EA2;
+$pink: #C92C6D;
+$black: #332C39;
+$shadow: rgba(0, 0, 0, 0.35);
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $white;
+    header {
+        height: 82px;
+        width: 100%;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+        box-shadow: $shadow 0px 5px 15px;
+        position: fixed;
+        a {
+            color: $white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menu {
+            // background-color: ;
+            i {
+                color: $sky;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s all;
+                background-color: transparent;
+                padding: 10px;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $shadow;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 350px;
+        min-height: 100vh;
+        background-color: $black;
+        @include flexCenter();
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: $shadow 5px 5px 15px;
+        transform: translateX(-110%);
+        transition: .5s;
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            i {
+                color: $sky;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .5s all;
+                background-color: transparent;
+                padding: 10px;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $shadow;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+        }
+        .opt {
+            background-color: gray;
+            font-size: 30px;
+            background-color: $sky;
+            color: $black;
+            font-weight: bolder;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            transition: .5s all;
+            &:hover {
+                background-color: $shadow;
+                padding: 10px;
+                border-radius: 5px;
+                color: $sky;
+                border: 1px solid $sky;
+            }
+            &:active {
+                transform: scale(0.8);
+            }
+
+        }
+        .btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            button {
+                cursor: pointer;
+                font-size: 16px;
+                margin: 10px;
+                padding: 10px;
+                width: 182px;
+                outline: none;
+                border-radius: 5px;
+                background-color: transparent;
+                border: 2px solid $sky;
+                color: $sky;
+                transition: .5s all;
+                &:hover {
+                    background-color: $shadow;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: $sky;
+                    border: 1px solid $sky;
+                }
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+    .container {
+        @include flexCenter();
+        flex-wrap: wrap;
+        padding: 20px;
+        .person {
+            padding: 20px;
+            margin: 4px;
+            background-color: $black;
+            @include flexCenter();
+            flex-direction: column;
+            border-radius: 5px;
+            img {
+                width: 200px;
+                height: 300px;
+            }
+            .infors {
+                margin-top: 10px;
+                @include flexCenter();
+                flex-direction: column;
+                h1 {
+                    font-size: 25px;
+                    color: $sky;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                    color: $white;
+                }
+            }
+        } 
+    }
+    .search {
+        width: 100%;
+        margin-top: 85px;
+        @include flexCenter();
+        flex-direction: column;
+        input {
+            font-size: 16px;
+            padding: 10px;
+            width: 400px;
+            border: none;
+            border-radius: 5px;
+            color: $sky;
+            background-color: $black;
+            outline: none;
+            display: none;
+        }
+        .home {
+            margin-top: 30vh;
+            @include flexCenter();
+            flex-direction: column;
+            h1 {
+                margin-bottom: 20px;
+                color: $black;
+                letter-spacing: 5px;
+            }
+            #visit {
+                font-size: 14px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                background-color: $sky;
+                color: $white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        .item {
+            margin-top: 20px;
+            @include flexCenter();
+            flex-wrap: wrap;
+            padding: 20px;
+            .person {
+                padding: 20px;
+                margin: 4px;
+                background-color: $black;
+                @include flexCenter();
+                flex-direction: column;
+                border-radius: 5px;
+                img {
+                    width: 200px;
+                    height: 300px;
+                }
+                .infors {
+                    margin-top: 10px;
+                    @include flexCenter();
+                    flex-direction: column;
+                    h1 {
+                        font-size: 25px;
+                        color: $sky;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                        color: $white;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        header {
+            @include flexBetween();
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    body {
+        .navbar {
+            width: 100%;
+        }
+    }
+}
